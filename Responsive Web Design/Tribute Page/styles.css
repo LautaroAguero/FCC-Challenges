@@ -1,0 +1,41 @@
+#main {
+  display: grid;
+  grid-template-columns: auto 0.5fr auto;
+  grid-template-rows: repeat(5, auto);
+  background-color: hsl(0, 0%, 91%);
+  grid-template-areas:
+    ". title ."
+    ". text ."
+    "image image image"
+    ". tribute ."
+    ". footer .";
+}
+#title {
+  justify-self: center;
+  grid-area: title;
+  margin-top: 1em;
+}
+#text {
+  justify-self: center;
+  grid-area: text;
+  margin-bottom: 1em;
+}
+#img-div {
+  justify-self: center;
+  align-self: center;
+  background-color: white;
+  grid-area: image;
+  padding-left: 22vw;
+  padding-right: 22vw;
+}
+#image-description {
+  margin-left: 5em;
+}
+#footer {
+  justify-self: center;
+  grid-area: footer;
+  margin-top: 2em;
+}
+#tribute-info {
+  grid-area: tribute;
+}
