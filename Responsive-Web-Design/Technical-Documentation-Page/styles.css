@@ -1,54 +1,108 @@
-body{
-    font-family: Arial;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display:flex;
-    flex-direction: row;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+#navbar {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #58a7c6;
+  color: #ffffff;
+  border-right: 3px solid #0d2949;
+}
+#navbar > h2 {
+  margin-left: 40px;
+}
+#navbar > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+#btn-menu{
+  display: none;     
+}
+label{
+  display: none;
+}
 
+#main-doc {
+  margin-left: 300px;
+  color: #2161ab;
+}
+#main-doc,
+section {
+  padding-left: 10px;
+}
+section,
+p {
+  margin-left: 20px;
+}
+section,
+ul {
+  margin: left 15px;
+}
+section,
+h2 {
+  margin-left: 10px;
+}
+.nav-link {
+  border-top: 1px solid #0d2949;
+  padding: 10px 10px 10px 40px;
+}
+.main-section {
+  width: auto;
+}
+pre {
+  color: #ffffff;
+  align-items: center;
+  background-color: #5495df;
+  border-radius: 5px;
+  display: flex;
+  height: 50px;
+  margin-right: 30px;
+  margin-left: 30px;
+  padding-left: 30px;
+  width: auto;
+  white-space: pre-wrap;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 768px) {
+  #navbar {
+    margin-left: -250px;
   }
-  #navbar{
-    width: 300px;
-    position: fixed;
-    z-index: 9999;     
-    flex-basis: 300px;
-    flex-grow: 0;
-    flex-shrink: 0;  
-    display: flex;
-    flex-direction: column; 
-  }
-  #navbar> h2{
-      margin-left: 40px;
-  }
-  #navbar> a {
-    text-decoration: none;
-    color: #000;    
+  .nav-link {
+    border-top: none;
+    
   }  
-  #main-doc{          
-    border-left: 3px solid rgb(163, 163, 163);
-    margin-left:300px;
+  #main-doc {
+    margin-left: 40px;
+    color: #2161ab;
   }
-  #main-doc, section {
-      padding-left: 20px;
+  label{
+    margin-left:250px;       
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    display:block;
+    width: 50px;
+    height: 50px;    
   }
-  section, p{
-      margin-left:5px;
+  label:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.3)
   }
-  section, ul {
-      margin: left 15px;
-  }
-  .nav-link{
-      border-top: 1px solid black;
-    padding: 10px 10px 10px 40px;
-  }
-  .main-section{
-    width: auto;
-  }
-  code{
-    margin-left: 30px;
-    background-color: rgb(197, 191, 191);    
-    padding: 15px;
-    border-radius: 5px;
-  }
-  
-  
+  img{
+    height: 100%;
+    width: 100%;
+  }     
+}
